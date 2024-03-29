@@ -1,66 +1,56 @@
-# Student Registration System
+Flask Student Registration App
+This is a simple Flask web application for student registration. It allows students to register themselves by providing their name, class, roll number, email, and phone number. Users can also log in and log out of the system.
 
-This is a simple web application built with Flask that allows students to register and login.
+Features
+User Authentication: Users can log in using their username and password. Passwords are securely hashed using bcrypt before storing them in the database.
+Student Registration: Students can register themselves by providing necessary details such as name, class, roll number, email, and phone number.
+Logging: The application logs important events using Python's built-in logging module, making it easier to debug and monitor.
+Prerequisites
+Before running the application, make sure you have the following installed:
 
-## Features
+Python (>=3.6)
+MySQL Server
+Docker (optional, for containerization)
+Setup
+Clone the repository:
 
-- **User Authentication**: Users can register, login, and logout securely.
-- **Student Registration**: Registered users can add their information such as name, class, roll number, email, and phone number.
-- **Data Storage**: User data and student registration details are stored in a MySQL database.
-- **Password Hashing**: User passwords are securely hashed using bcrypt before storing them in the database.
-- **Nginx Configuration**: The application is served using Nginx as a reverse proxy, providing better performance and security.
+bash
+Copy code
+git clone https://github.com/your-username/flask-student-registration.git
+Install dependencies:
 
-## Prerequisites
-
-- Python 3.x
-- Flask
-- MySQL
-- Nginx
-
-## Installation
-
-1. Clone the repository:
-
-git clone https://github.com/vijayvj6796/student-python-webapp.git
-cd student-registration-system
-
-
-2. Install the required Python packages:
-
+bash
+Copy code
+cd flask-student-registration
 pip install -r requirements.txt
+Set up MySQL database:
 
+Create a MySQL database named student.
+Modify the database configuration in app.py to match your MySQL server settings.
+Run the application:
 
-3. Set up MySQL database:
-
-- Create a new database named `student`.
-- Update the MySQL configuration in `app.py` with your database credentials.
-
-4. Configure Nginx:
-
-- Update the Nginx configuration file to proxy requests to the Flask application.
-- Restart Nginx to apply the changes.
-
-5. Run the Flask application:
-
+bash
+Copy code
 python app.py
+Access the application in your web browser at http://localhost:5000.
 
+Docker Support
+You can also run the application using Docker. Follow these steps:
 
-6. Access the application:
+Build the Docker image:
 
-Navigate to `http://localhost` in your web browser to access the application.
+bash
+Copy code
+docker build -t flask-student-registration .
+Run the Docker container:
 
-## Usage
+bash
+Copy code
+docker run -p 5000:5000 flask-student-registration
+Access the application in your web browser at http://localhost:5000.
 
-1. Register: Create a new account by providing a username and password.
-2. Login: Log in to your account with the registered username and password.
-3. Student Registration: After logging in, you can add your information in the registration form.
-4. Logout: Click on the "Logout" button to log out from your account.
+Contributing
+Contributions are welcome! Please feel free to open issues or submit pull requests for any features or fixes you'd like to see.
 
-## Contributing
-
-Contributions are welcome! Feel free to submit bug reports, feature requests, or pull requests.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
+License
+This project is licensed under the MIT License.
