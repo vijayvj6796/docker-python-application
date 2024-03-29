@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 db_config = {
     'host': '172.31.20.184',
     'user': 'mysql',
-    'password': '5l@tf4TF',
+    'password': 'password',
     'db': 'student',
     'charset': 'utf8mb4',
     'cursorclass': pymysql.cursors.DictCursor
