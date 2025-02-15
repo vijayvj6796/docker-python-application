@@ -23,6 +23,8 @@ Before running the application, make sure you have the following installed:
    ```bash
    git clone https://github.com/your-username/flask-student-registration.git
    cd flask-student-registration
+   sudo apt install python3-pip python3.12-venv net-tools
+   source venv/bin/activate
     ```
 
 2. Install dependencies:
@@ -38,7 +40,16 @@ Before running the application, make sure you have the following installed:
 1. Run the application:
     ```bash
     python app.py
+    OR
+    nohup python app.py > app.log 2>&1 &
     ```
+## Explanation:
+
+nohup: Ensures the process isn’t killed when you log out.
+> app.log: Redirects the output to a log file named app.log.
+2>&1: Redirects errors to the same log file.
+&: Runs the command in the background.
+
 
 2. Access the application in your web browser at http://localhost:5000.
 
